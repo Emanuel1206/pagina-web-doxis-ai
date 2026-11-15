@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>DOXIS AI</title>
+<meta name="description" content="DOXIS AI: el futuro de tu computadora comienza con tu voz.">
+<meta name="theme-color" content="#061a28">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="DOXIS AI">
+<meta property="og:description" content="El futuro de tu computadora comienza con tu voz.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-state="standby">
+<canvas id="sphere" aria-hidden="true"></canvas>
+<div class="grid" aria-hidden="true"></div>
+
+<i class="hud tl"></i><i class="hud tr"></i><i class="hud bl"></i><i class="hud br"></i>
+<span class="tick">DOXIS / VOICE · v1.0</span>
+<header>
+  <p class="eyebrow" id="eyebrow">INTERFAZ DE VOZ</p>
+  <h1>DOXIS AI</h1>
+</header>
+<span class="side l">SYS / TEL</span>
+<span class="side r">MIC / LOCAL</span>
+
+<section id="welcome">
+  <p id="hello">Hola. Soy DOXIS. Bienvenido a mi entorno.</p>
+  <button id="start" class="btn primary">[ INICIAR EXPERIENCIA ]</button>
+  <div class="lang" role="group" aria-label="Idioma / Language"><button class="btn on" data-l="es">Español</button><button class="btn" data-l="en">English</button></div>
+</section>
+
+<main id="ui" hidden>
+  <div class="status"><i></i><span id="status">STANDBY</span></div>
+  <p id="sub" aria-live="polite"></p>
+
+  <section id="menu" hidden>
+    <p class="ask" id="askt">¿Qué te gustaría conocer sobre mí?</p>
+    <div id="chips"></div>
+  </section>
+
+  <div class="ctl">
+    <button id="play" class="btn icon" aria-label="Reproducir">&#9654;</button>
+    <button id="pause" class="btn icon" aria-label="Pausar">&#10074;&#10074;</button>
+    <button id="stop" class="btn icon" aria-label="Detener">&#9632;</button>
+    <input id="vol" type="range" min="0" max="1" step=".05" value="1" aria-label="Volumen">
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
